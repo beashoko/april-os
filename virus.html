@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virus Warning</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: flash 1s steps(1, end) infinite;
+    }
+    h1 {
+      margin: 24px;
+      font-size: clamp(2.5rem, 10vw, 8rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+    @keyframes flash {
+      0%, 49% { background: #d40000; color: #fff; }
+      50%, 100% { background: #fff; color: #d40000; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body {
+        animation: none;
+        background: #d40000;
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>YOU GOT A VIRUS!</h1>
+</body>
+</html>
